@@ -1,0 +1,70 @@
+.customer-row {
+    background-color: #fcfbf9;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .table thead th {
+    background-color: #f8f9fa;
+   
+  }
+  #table-container
+  {
+
+    border-radius: 10px !important;
+    margin-top: 50px !important;
+
+    
+  }
+  
+  
+
+.orders-table-container {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+}
+
+/* Make the orders table container visible */
+.orders-table-container.show {
+    opacity: 1;
+    max-height: 1000px;
+    visibility: visible;
+}
+
+/* Style for product rows */
+.product-row {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+}
+
+/* Make product rows visible */
+.product-row.show {
+    opacity: 1;
+    max-height: 500px; 
+    visibility: visible;
+}
+
+/* Style for product row toggle icon */
+.product-row .toggle-icon {
+    transition: transform 0.5s ease;
+}
+
+.toggle-icon
+{
+    background-color: #f8f9fa !important;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.toggle-icon:hover
+{
+    background-color:#ccc !important;
+    cursor: pointer;
+
+}
+
