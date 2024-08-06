@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +9,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="tableData.js" defer></script>
   <link rel="stylesheet" href="styles.css">
-  
 </head>
 <body>
-  <div class="container mt-4" id="table-container">
+   
+  <nav class="navbar navbar-expand-lg border-bottom">
+    
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#"><img src="logo2.png" height="40px" width="170px" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tasks</a>
+          </li>
+         
+          
+        </ul>
+      </div>
+      
+        <form class="d-flex justify-content-end " role="search">
+          <input class="form-control me-2 mr-3" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      
+      </div>
+    
+  </nav>
+
+  <div class="heading">
+  <h1>DAILY SALES REPORT</h1>
+  </div>
+  <div class="container mt-4 table table-dark " id="table-container">
+    
     <div class="row">
-        <div class="col-md-1"><strong></strong></div>
-      <div class="col-md-4"><strong>CUSTOMER</strong></div>
-      <div class="col-md-4"><strong>LOCATION</strong></div>
-      <div class="col-md-3"><strong>TOTAL</strong></div>
+      <div class="col-md-1 thead"><strong></strong></div>
+      <div class="col-md-4 thead"><strong>CUSTOMER</strong></div>
+      <div class="col-md-4 thead"><strong>LOCATION</strong></div>
+      <div class="col-md-3 thead"><strong>TOTAL</strong></div>
     </div>
-    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
