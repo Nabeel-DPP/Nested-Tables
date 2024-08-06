@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function() {
     tableData.forEach((customerData, index) => {
         
         const customerRow = document.createElement('div');
-        customerRow.className = 'row customer-row';
+        customerRow.className = 'row  customer-row table-bordered';
         customerRow.id = `customer-row-${index}`;
         customerRow.innerHTML = `
             
             <div class="col-md-1"><i class="fa-solid fa-caret-right toggle-icon"></i></div>
             <div class="col-md-4">${customerData.customer}</div>
             <div class="col-md-4">${customerData.location}</div>
-            <div class="col-md-3">${customerData.total}</div>
+            <div class="col-md-3" align="right">${customerData.total}</div>
             
         `;
 
@@ -22,10 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         ordersTableContainer.id = `orders-table-container-${index}`;
         ordersTableContainer.className = 'orders-table-container';
         const ordersTable = document.createElement('table');
-        ordersTable.className = 'table table-bordered mt-2';
+        ordersTable.className = 'table  table-bordered mt-2';
         ordersTable.innerHTML = `
             <thead class="thead-light">
                 <tr>
+                    <th scope="col"><input type='checkbox'/></th>
                     <th scope="col"></th>
                     <th scope="col">ORDER #</th>
                     <th scope="col">NBR ITEMS</th>
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <tbody>
                 ${customerData.orders.map(order => `
                     <tr class="order-row">
+                        <td><input type='checkbox'/></td>
                         <td><i class="fa-solid fa-caret-right toggle-icon"></i></td>
                         <td>${order.orderId}</td>
                         <td>${order.nbrItems}</td>
@@ -47,17 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             <table class="table">
                                 <thead class="thead-light">
                                     <tr>
+                                        <th scope="col"><input type='checkbox'/></th>
                                         <th scope="col">PRODUCT</th>
                                         <th scope="col">QUANTITY</th>
                                         <th scope="col">PRICE</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody class="product-items">
                                     ${order.products.map(product => `
                                         <tr>
+                                            <td><input type='checkbox'/></td>
                                             <td>${product.product}</td>
-                                            <td>${product.quantity}</td>
+                                            <td><i class="fa-regular fa-square-plus quality-icon "> &nbsp;&nbsp; </i>${product.quantity}&nbsp;&nbsp;<i class="fa-regular fa-square-minus quality-icon "></i></td>
                                             <td>${product.price}</td>
+                                            <td><i class="fa-solid fa-trash"></i></td>
                                         </tr>
                                     `).join('')}
                                 </tbody>
@@ -93,10 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-
-
 
 
 

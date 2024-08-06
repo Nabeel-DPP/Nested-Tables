@@ -118,6 +118,126 @@ const tableData = [
           ]
         }
       ]
+    },
+    {
+      customer: 'Ahmed Khan',
+      location: 'Karachi, Pakistan',
+      total: '1200.50 PKR',
+      orders: [
+        {
+          orderId: 234567,
+          nbrItems: 10,
+          date: '2024-08-05',
+          total: '1200.50 PKR',
+          products: [
+            { product: 'Basmati Rice', quantity: 5, price: '200.00 PKR' },
+            { product: 'Chicken Karahi', quantity: 1, price: '600.00 PKR' },
+            { product: 'Naan', quantity: 10, price: '50.00 PKR' },
+            { product: 'Yogurt', quantity: 2, price: '70.00 PKR' },
+            { product: 'Ghee', quantity: 1, price: '80.00 PKR' }
+          ]
+        }
+      ]
+    },
+    {
+      customer: 'Fatima Ali',
+      location: 'Lahore, Pakistan',
+      total: '850.75 PKR',
+      orders: [
+        {
+          orderId: 345678,
+          nbrItems: 8,
+          date: '2024-07-20',
+          total: '850.75 PKR',
+          products: [
+            { product: 'Chapati Flour', quantity: 2, price: '150.00 PKR' },
+            { product: 'Lassi', quantity: 3, price: '90.00 PKR' },
+            { product: 'Potatoes', quantity: 4, price: '100.00 PKR' },
+            { product: 'Onions', quantity: 2, price: '60.00 PKR' },
+            { product: 'Coriander', quantity: 1, price: '20.00 PKR' }
+          ]
+        }
+      ]
+    },
+    {
+      customer: 'Bilal Hussain',
+      location: 'Islamabad, Pakistan',
+      total: '950.00 PKR',
+      orders: [
+        {
+          orderId: 456789,
+          nbrItems: 9,
+          date: '2024-08-03',
+          total: '950.00 PKR',
+          products: [
+            { product: 'Beef Kebab', quantity: 3, price: '150.00 PKR' },
+            { product: 'Raita', quantity: 2, price: '80.00 PKR' },
+            { product: 'Biryani', quantity: 2, price: '300.00 PKR' },
+            { product: 'Fruit Chaat', quantity: 1, price: '120.00 PKR' },
+            { product: 'Mango Juice', quantity: 1, price: '100.00 PKR' }
+          ]
+        }
+      ]
+    },
+    {
+      customer: 'Sara Ahmed',
+      location: 'Faisalabad, Pakistan',
+      total: '670.40 PKR',
+      orders: [
+        {
+          orderId: 567890,
+          nbrItems: 6,
+          date: '2024-07-10',
+          total: '670.40 PKR',
+          products: [
+            { product: 'Chicken Biryani', quantity: 1, price: '500.00 PKR' },
+            { product: 'Salad', quantity: 1, price: '70.00 PKR' },
+            { product: 'Tea Leaves', quantity: 1, price: '50.00 PKR' },
+            { product: 'Sugar', quantity: 2, price: '25.00 PKR' },
+            { product: 'Milk', quantity: 2, price: '25.00 PKR' }
+          ]
+        }
+      ]
+    },
+    {
+      customer: 'Usman Tariq',
+      location: 'Rawalpindi, Pakistan',
+      total: '540.90 PKR',
+      orders: [
+        {
+          orderId: 678901,
+          nbrItems: 7,
+          date: '2024-06-30',
+          total: '540.90 PKR',
+          products: [
+            { product: 'Kofta Curry', quantity: 1, price: '350.00 PKR' },
+            { product: 'Roti', quantity: 10, price: '100.00 PKR' },
+            { product: 'Pulses', quantity: 3, price: '70.00 PKR' },
+            { product: 'Cucumber', quantity: 2, price: '20.00 PKR' },
+            { product: 'Tomatoes', quantity: 5, price: '50.00 PKR' }
+          ]
+        }
+      ]
+    },
+    {
+      customer: 'Nida Rehman',
+      location: 'Quetta, Pakistan',
+      total: '730.60 PKR',
+      orders: [
+        {
+          orderId: 789012,
+          nbrItems: 8,
+          date: '2024-08-01',
+          total: '730.60 PKR',
+          products: [
+            { product: 'Lamb Chops', quantity: 1, price: '500.00 PKR' },
+            { product: 'Mint Chutney', quantity: 1, price: '50.00 PKR' },
+            { product: 'Pita Bread', quantity: 5, price: '60.00 PKR' },
+            { product: 'Sliced Cheese', quantity: 3, price: '60.00 PKR' },
+            { product: 'Fruits', quantity: 3, price: '60.00 PKR' }
+          ]
+        }
+      ]
     }
   ];
   
