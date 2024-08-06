@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const tableContainer = document.querySelector('#table-container');
 
@@ -7,18 +8,19 @@ document.addEventListener('DOMContentLoaded', function() {
         customerRow.className = 'row customer-row';
         customerRow.id = `customer-row-${index}`;
         customerRow.innerHTML = `
-            <div class="col-md-1"><i class="fa-solid fa-greater-than toggle-icon"></i></div>
+            
+            <div class="col-md-1"><i class="fa-solid fa-caret-right toggle-icon"></i></div>
             <div class="col-md-4">${customerData.customer}</div>
             <div class="col-md-4">${customerData.location}</div>
             <div class="col-md-3">${customerData.total}</div>
+            
         `;
 
         tableContainer.appendChild(customerRow);
 
-       
         const ordersTableContainer = document.createElement('div');
         ordersTableContainer.id = `orders-table-container-${index}`;
-        ordersTableContainer.className = 'orders-table-container'; // Apply the class for transition
+        ordersTableContainer.className = 'orders-table-container';
         const ordersTable = document.createElement('table');
         ordersTable.className = 'table table-bordered mt-2';
         ordersTable.innerHTML = `
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <tbody>
                 ${customerData.orders.map(order => `
                     <tr class="order-row">
-                        <td><i class="fa-solid fa-greater-than toggle-icon"></i></td>
+                        <td><i class="fa-solid fa-caret-right toggle-icon"></i></td>
                         <td>${order.orderId}</td>
                         <td>${order.nbrItems}</td>
                         <td>${order.date}</td>
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <th scope="col">PRICE</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="product-items">
                                     ${order.products.map(product => `
                                         <tr>
                                             <td>${product.product}</td>
@@ -69,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ordersTableContainer.appendChild(ordersTable);
         tableContainer.appendChild(ordersTableContainer);
 
-        // Add click event listener to toggle order table
         const toggleIcon = customerRow.querySelector('.toggle-icon');
         toggleIcon.addEventListener('click', function() {
             const ordersTableContainer = document.getElementById(`orders-table-container-${index}`);
@@ -79,19 +80,28 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleIcon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(90deg)';
         });
 
-        // Add click event listener to toggle product rows
         ordersTable.querySelectorAll('.order-row').forEach(orderRow => {
             orderRow.addEventListener('click', function() {
                 const nextRow = orderRow.nextElementSibling;
                 if (nextRow && nextRow.classList.contains('product-row')) {
-                    nextRow.classList.toggle('show', nextRow.classList.contains('show') ? false : true);
+                    const isVisible = nextRow.classList.contains('show');
+                    nextRow.classList.toggle('show', !isVisible);
                     const productToggleIcon = orderRow.querySelector('.toggle-icon');
-                    productToggleIcon.style.transform = nextRow.classList.contains('show') ? 'rotate(90deg)' : 'rotate(0deg)';
+                    productToggleIcon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(90deg)';
                 }
             });
         });
     });
 });
+
+
+
+
+
+
+
+
+
 
 
 
