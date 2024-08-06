@@ -1,70 +1,114 @@
-.customer-row {
-    background-color: #fcfbf9;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  .table thead th {
-    background-color: #f8f9fa;
-   
-  }
-  #table-container
-  {
 
+
+#table-container {
     border-radius: 10px !important;
-    margin-top: 50px !important;
-
+    margin-top: 30px !important;
+    padding: 10px;
+    font-size: 30px;
+    overflow: hidden;
     
-  }
-  
-  
+}
+
+
+.thead
+{
+    /* margin-bottom: 25px; */
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
 
 .orders-table-container {
-    opacity: 0;
     max-height: 0;
     overflow: hidden;
     visibility: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+    transition: max-height 0.5s ease, visibility 0.5s ease;
 }
 
-/* Make the orders table container visible */
 .orders-table-container.show {
-    opacity: 1;
-    max-height: 1000px;
+    max-height: 1000px; /* Set a reasonable max-height */
     visibility: visible;
 }
 
-/* Style for product rows */
 .product-row {
-    opacity: 0;
     max-height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+    
+    visibility: collapse;
+    transition: max-height 0.5s ease, visibility 0.5s ease;
+    
 }
 
-/* Make product rows visible */
 .product-row.show {
-    opacity: 1;
-    max-height: 500px; 
-    visibility: visible;
+    
+    max-height: 1000px;
+    display: table-row;
+    visibility:visible;
+    /* transition: opacity 0.5s ease, max-height 0.5s ease; */
+    
 }
 
-/* Style for product row toggle icon */
-.product-row .toggle-icon {
+.toggle-icon {
+    /* background-color: #f8f9fa !important; */
+    font-size: 20px;
+    /* padding: 5px; */
+    /* border-radius: 5px; */
     transition: transform 0.5s ease;
 }
 
-.toggle-icon
-{
-    background-color: #f8f9fa !important;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.toggle-icon:hover
-{
-    background-color:#ccc !important;
+.toggle-icon:hover {
+    /* background-color: #ccc !important; */
     cursor: pointer;
-
 }
+.navbar-nav
+{
+    display: flex !important;
+    
+}
+.nav-item
+{
+    margin-left: 40px ;
+    font-size: 20px;
+    font-weight:bolder;
+}
+
+.heading
+{
+    
+    text-align: center;
+    margin-top: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    
+    
+}
+.customer-row
+{
+    transition: 0.3s ease;
+}
+.customer-row:hover
+{
+    background-color: rgb(61, 72, 221);
+}
+.order-row
+{
+    color: white;
+    transition: 0.3s ease;
+    
+}
+.order-row:hover
+{
+    background-color: rgb(61, 72, 221);
+}
+
+.product-items
+{
+    color: white;
+    transition: 0.3s ease;
+    
+}
+.product-items :hover
+{
+    background-color: rgb(61, 72, 221);
+}
+
 
